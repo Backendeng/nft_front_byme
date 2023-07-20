@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="Web site created using create-react-app" />
+  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+  <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+  <!-- preload head styles -->
+  <link rel="preload" href="assets/fonts/brand-icons/brand-icons.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/unicons/Unicons.woff?lkolxg" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="cdn.jsdelivr.net/npm/swiper%408.3.2/swiper-bundle.min.css" as="style">
+  <link rel="preload" href="cdn.jsdelivr.net/npm/uikit%403.15.1/dist/css/uikit.min.css" as="style">
+
+  <!-- preload footer scripts -->
+  <link rel="preload" href="assets/js/libs/uikit.min.js" as="script">
+  <link rel="preload" href="assets/js/uikit-components.js" as="script">
+  <link rel="preload" href="assets/js/libs/jquery.min.js" as="script">
+  <link rel="preload" href="assets/js/libs/swiper-bundle.min.js" as="script">
+  <link rel="preload" href="assets/js/libs/feather.min.js" as="script">
+  <link rel="preload" href="assets/js/libs/typed.min.js" as="script">
+  <link rel="preload" href="assets/js/libs/anime.min.js" as="script">
+  <link rel="preload" href="assets/js/app.js" as="script">
+  <link rel="preload" href="assets/js/helpers/data-attr-helper.js" as="script">
+  <link rel="preload" href="assets/js/helpers/swiper-helper.js" as="script">
+  <link rel="preload" href="assets/js/helpers/typed-helper.js" as="script">
+  <link rel="preload" href="assets/js/helpers/anime-helper.js" as="script">
+
+  <!-- include styles -->
+  <script src="assets/js/app-head.js"></script>
+  <link rel="stylesheet" href="assets/css/theme/main.min.css">
+  <link rel="stylesheet" href="assets/css/theme/tailight.css">
+
+
+  <!-- include scripts -->
+  <script src="assets/js/libs/uikit.min.js"></script>
+  <script src="assets/js/uikit-components.js"></script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-B5JJP7FY91"></script>
+  <script async type="module">
+    import { getCLS, getFCP, getFID, getLCP, getTTFB } from 'https://cdn.jsdelivr.net/npm/web-vitals@2.1.2/dist/web-vitals.js';
+  </script>
+
+  <title>React App</title>
+</head>
+
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"></div>
+  <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  <!-- include scripts -->
+  <script defer src="assets/js/libs/jquery.min.js"></script>
+  <script defer src="assets/js/libs/swiper-bundle.min.js"></script>
+  <script defer src="assets/js/libs/feather.min.js"></script>
+  <script defer src="assets/js/libs/typed.min.js"></script>
+  <script defer src="assets/js/libs/anime.min.js"></script>
+  <script defer src="assets/js/app.js"></script>
+  <script defer src="assets/js/helpers/data-attr-helper.js"></script>
+  <script defer src="assets/js/helpers/swiper-helper.js"></script>
+  <script defer src="assets/js/helpers/typed-helper.js"></script>
+  <script defer src="assets/js/helpers/anime-helper.js"></script>
+
+  <!-- <script defer src="assets/js/helpers/anime-helper-defined-timelines.js"></script> -->
+  <script>
+    // Schema toggle via URL
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const getSchema = urlParams.get("schema");
+    if (getSchema === "dark") {
+      document.documentElement.classList.add("uk-dark");
+      localStorage.setItem("darkMode", "1");
+    } else if (getSchema === "light") {
+      document.documentElement.classList.remove("uk-dark");
+      localStorage.setItem("darkMode", "0");
+    }
+  </script>
+</body>
+
+</html>
