@@ -1,0 +1,967 @@
+<!DOCTYPE html>
+<html lang="zxx" class="uk-background-white dark:uk-background-gray-100 dark:uk-text-gray-20 uk-dark">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- favicon -->
+        <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico"/>
+        <link rel="icon" type="image/png" href="assets/images/favicon.png"/>
+        <title>SanoSwap.com | Swap Your Digital Assets. More Secure, More Social</title>
+        <meta name="description" content="SanoSwap.com is a multichain platform that allows P2P swaps of your digital assets in a more secure and social way.">
+        <meta name="theme-color" content="#741ff5">
+
+        <!-- preload head styles -->
+        <link rel="preload" href="assets/fonts/brand-icons/brand-icons.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="assets/fonts/unicons/Unicons.woff?lkolxg" as="font" type="font/woff" crossorigin>
+        <link rel="preload" href="cdn.jsdelivr.net/npm/swiper%408.3.2/swiper-bundle.min.css" as="style">
+        <link rel="preload" href="cdn.jsdelivr.net/npm/uikit%403.15.1/dist/css/uikit.min.css" as="style">
+
+        <!-- preload footer scripts -->
+        <link rel="preload" href="assets/js/libs/uikit.min.js" as="script">
+        <link rel="preload" href="assets/js/uikit-components.js" as="script">
+        <link rel="preload" href="assets/js/libs/jquery.min.js" as="script">
+        <link rel="preload" href="assets/js/libs/swiper-bundle.min.js" as="script">
+        <link rel="preload" href="assets/js/libs/feather.min.js" as="script">
+        <link rel="preload" href="assets/js/libs/typed.min.js" as="script">
+        <link rel="preload" href="assets/js/libs/anime.min.js" as="script">
+        <link rel="preload" href="assets/js/app.js" as="script">
+        <link rel="preload" href="assets/js/helpers/data-attr-helper.js" as="script">
+        <link rel="preload" href="assets/js/helpers/swiper-helper.js" as="script">
+        <link rel="preload" href="assets/js/helpers/typed-helper.js" as="script">
+        <link rel="preload" href="assets/js/helpers/anime-helper.js" as="script">
+
+        <!-- include styles -->
+        <script src="assets/js/app-head.js"></script>
+        <link rel="stylesheet" href="assets/css/theme/main.min.css">
+        <link rel="stylesheet" href="assets/css/theme/tailight.css">
+
+        <!-- include scripts -->
+        <script src="assets/js/libs/uikit.min.js"></script>
+        <script src="assets/js/uikit-components.js"></script>
+    
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-B5JJP7FY91"></script>
+        <script async type="module">
+            import { getCLS, getFCP, getFID, getLCP, getTTFB } from 'https://cdn.jsdelivr.net/npm/web-vitals@2.1.2/dist/web-vitals.js';
+        </script>
+    </head>
+    <body class="uni-body">
+        <script>
+          (function loop(){
+            var headers = document.getElementsByClassName("uni-header uk-position-top");
+            for(var i = 0; i < headers.length; i++){
+              if(headers[i].classList.contains("uk-dark")){
+                document.getElementById("logo").style.filter = "invert(0)";
+              } else {
+                document.getElementById("logo").style.filter = "invert(1)";
+              }
+            }
+            setTimeout(loop, 1000);
+          }())
+        </script>
+
+        <!-- custom CSS for scrollbar effect -->
+        <style>
+           
+        html {
+            overflow: scroll;
+            overflow-x: hidden;
+        }
+        ::-webkit-scrollbar {
+            width: 0;  /* Remove scrollbar space */
+            background: transparent;  /* Optional: just make scrollbar invisible */
+        }
+        /* Optional: show position indicator in red */
+        ::-webkit-scrollbar-thumb {
+            background: #FF0000;
+        }
+        </style>
+
+        <!-- Dark/Light toggle -->
+        <div class="darkmode-trigger uk-position-bottom-right uk-position-small uk-position-fixed uk-box-shadow-large uk-radius-circle" data-darkmode-toggle="">
+            <label class="switch">
+                <span class="sr-only">Dark mode toggle</span>
+                <input type="checkbox">
+                <span class="slider"></span>
+            </label>
+        </div>
+
+        <!-- Menu modal -->
+        <div id="uni_mobile_menu" class="uni-mobile-menu uk-offcanvas" data-uk-offcanvas="mode: push; overlay: true; flip: true; selPanel: .uk-offcanvas-bar-panel;">
+            <div class="uk-offcanvas-bar-panel uk-panel dark:uk-background-gray-100">
+                <div class="uni-mobile-menu-wrap uk-flex-column uk-flex-between" data-uk-height-viewport="offset-bottom: true;">
+                    <div class="uni-mobile-menu-content">
+                        <header class="uk-card uk-card-2xsmall uk-flex-middle uk-flex-between">
+                            <div class="uk-flex-1">
+                                <button aria-label="Close Menu" class="uk-offcanvas-close uk-button uk-button-small uk-button-icon uk-button-default uk-button-outline uk-radius-circle" type="button">
+                                    <i class="uk-icon-small" data-feather="arrow-left"></i>
+                                </button>
+                            </div>
+                            <div>
+                                <p class="uk-p uk-text-uppercase uk-margin-remove">Navigation</p>
+                            </div>
+                            <div class="uk-flex-1"></div>
+                        </header>
+                        <hr class="uk-margin-remove">
+                        <div class="uk-card uk-card-small">
+                            <div class="uk-panel">
+                                <ul class="uk-nav uk-nav-default">
+                                    <li class="uk-nav-header">Homepages</li>
+                                    <li><a href="landing-01.html">Landing 01</a></li>
+                                    <li><a href="landing-02.html">Landing 02</a></li>
+                                    <li><a href="landing-03.html">Landing 03</a></li>
+                                    <li><a href="landing-04.html">Landing 04</a></li>
+                                    <li><a href="landing-05.html">Landing 05</a></li>
+                                    <li class="uk-nav-header">Inner pages</li>
+                                    <li><a href="base.html">Base components</a></li>
+                                    <li><a href="connect-wallet.html">Connect wallet</a></li>
+                                    <li><a href="contact.html">Contact</a></li>
+                                    <li><a href="404.html">404 page</a></li>
+                                    <li><a href="coming-soon.html">Coming soon</a></li>
+                                    <li class="uk-nav-header">Content &amp; Privacy</li>
+                                    <li><a href="terms.html">Terms of use</a></li>
+                                    <li><a href="privact.html">Privacy Policy</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Connect wallet modal -->
+        <div id="uni_connect_wallet" class="uk-modal-full" data-uk-modal>
+            <div class="uk-modal-dialog">
+                <div class="uk-position-top uk-position-z-index-negative" data-uk-height-viewport="">
+                    <div class="uk-position-cover uk-background-cover uk-opacity-10 dark:uk-hidden" data-src="assets/images/gradient-01.png" data-uk-img></div>
+                    <div class="uk-position-cover uk-background-cover uk-opacity-20 uk-hidden dark:uk-visible" data-src="assets/images/gradient-01.png" data-uk-img></div>
+                </div>
+                <button class="uk-modal-close-full uk-close-large uk-position-small" type="button" data-uk-close></button>
+                <div class="uk-container">
+                    <div class="uk-grid uk-flex-center uk-flex-middle uk-child-width-1-2@m uk-section" data-uk-grid data-uk-height-viewport>
+                        <div>
+                            <div class="uk-panel uk-text-center">
+                                <h2 class="uk-p uk-h3@s uk-h2@l uk-margin-remove">Connect your wallet</h2>
+                                <div class="uk-grid uk-grid-xsmall uk-grid-small@m uk-child-width-1-2@m uk-margin-medium-top uk-margin-large-top@m" data-uk-grid="">
+                                    <div>
+                                        <div class="uk-panel uk-card uk-card-small uk-card-medium@m uk-card-border uk-radius-medium uk-radius-large@m uk-box-shadow-hover-small hover:uk-border-primary">
+                                            <a href="#metamask" class="uk-position-cover"></a>
+                                            <img src="assets/images/icon-metamask.svg" alt="metamask">
+                                            <h4 class="uk-text-bold uk-p@m uk-margin-small-top uk-margin-medium-top@m">Metamask</h4>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="uk-panel uk-card uk-card-small uk-card-medium@m uk-card-border uk-radius-medium uk-radius-large@m uk-box-shadow-hover-small hover:uk-border-primary">
+                                            <a href="#bitgo" class="uk-position-cover"></a>
+                                            <img src="assets/images/icon-bitgo.svg" alt="bitgo">
+                                            <h4 class="uk-text-bold uk-p@m uk-margin-small-top uk-margin-medium-top@m">BitGo</h4>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="uk-panel uk-card uk-card-small uk-card-medium@m uk-card-border uk-radius-medium uk-radius-large@m uk-box-shadow-hover-small hover:uk-border-primary">
+                                            <a href="#trustwallet" class="uk-position-cover"></a>
+                                            <img src="assets/images/icon-trustwallet.svg" alt="trustwallet">
+                                            <h4 class="uk-text-bold uk-p@m uk-margin-small-top uk-margin-medium-top@m">Trust Wallet</h4>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="uk-panel uk-card uk-card-small uk-card-medium@m uk-card-border uk-radius-medium uk-radius-large@m uk-box-shadow-hover-small hover:uk-border-primary">
+                                            <a href="#coinbase" class="uk-position-cover"></a>
+                                            <img src="assets/images/icon-coinbase.svg" alt="coinbase">
+                                            <h4 class="uk-text-bold uk-p@m uk-margin-small-top uk-margin-medium-top@m">Coinbase</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Wrapper start -->
+        <div class="wrap">
+
+            <!-- Header start -->
+            <header class="uni-header uk-position-top">
+                <div class="uni-header-navbar" data-uk-sticky="top: 70; show-on-up: false; animation: uk-animation-slide-top" data-anime="opacity:[0, 1]; translateY:[-24, 0]; onview: true; delay: 0;">
+                    <div class="uk-container">
+                        <nav class="uk-navbar uk-navbar-container uk-navbar-transparent" data-uk-navbar>
+                            <div class="uk-navbar-top">
+                                <div class="uk-navbar-left">
+                                    <img src="https://cdn.discordapp.com/attachments/1129749362461913159/1129821912466460853/logo1.png" style="margin-right:-2rem;" id="logo" alt="logo" width="40" height="440">
+                                    <a class="uk-logo uk-navbar-item uk-h4 uk-h3@m uk-margin-remove" href="./"> Sano Swap </a>
+                                </div>
+
+                                <div class="uk-navbar-right uk-flex-1 uk-flex-right">
+                                    <ul class="uk-navbar-nav dark:uk-text-gray-10 uk-visible@m" data-uk-scrollspy-nav="closest: li; scroll: true; offset: 80" data-uk-navbar-bound>
+                                        <li><a href="#uni_minting">Swap</a></li>
+                                        <li><a href="#uni_about">About</a></li>
+                                    </ul>
+                                    <div class="uk-navbar-item">
+                                        <ul class="uk-subnav uk-subnav-small uk-visible@m">
+                                            <li>
+                                                <a href=""><i class="uk-icon uk-icon-medium unicon-logo-twitter dark:uk-text-gray-10"></i></a>
+                                            </li>
+                                        </ul>
+
+                                        <!-- header: call to actions -->
+                                        <a href="#uni_connect_wallet" class="uk-button uk-button-medium@m uk-button-default uk-button-outline uk-margin-left uk-visible@l" data-uk-toggle="">
+                                            <span>Connect wallet</span>
+                                        </a>
+                                    </div>
+
+                                    <div class="uk-navbar-item uk-hidden@m">
+                                      <a style="position: absolute; top: 15px; right: 20px;" href="#" class="uk-button uk-button-medium@m uk-button-icon uk-hidden@m uk-margin-small-right" data-uk-toggle="">
+                                        <i class="uk-icon unicon-logo-twitter"></i>
+                                      </a>
+                                        <a style="position: absolute; top: 15px; right: -20px;" href="#uni_connect_wallet" class="uk-button uk-button-medium@m uk-button-icon uk-hidden@m uk-margin-small-right" data-uk-toggle="">
+                                            <i class="uk-icon unicon-wallet"></i>
+                                        </a>
+                                        <!-- <a href="#uni_mobile_menu" data-uk-toggle>
+                                            <span class="uk-icon uk-icon-medium material-icons">menu</span>
+                                        </a> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Header end -->
+
+            <style>
+                .dark:uk-background-dark-5 {
+                    background-color: #1c1c1c;
+                }
+            </style>
+
+            <!-- Hero start -->
+            <div id="uni_hero" class="uni-hero uk-section uk-section-xlarge uk-padding-remove-bottom uk-panel">
+                <div class="uk-position-top uk-position-z-index-negative uk-overflow-hidden uk-blend-overlay" data-uk-height-viewport="">
+                    <img class="uk-position-top-left uk-position-fixed uk-blur-large" style="left: -4%; top: -4%" width="500" src="assets/images/gradient-circle.svg" alt="Circle">
+                    <img class="uk-position-bottom-right uk-position-fixed uk-blur-large" style="right: -4%; bottom: -4%" width="500" src="assets/images/gradient-circle.svg" alt="Circle">
+                </div>
+                <div class="uk-position-top uk-position-z-index-negative" data-uk-height-viewport="">
+                    <div class="uk-position-cover uk-background-cover uk-opacity-10 dark:uk-hidden" data-src="assets/images/gradient-01.png" data-uk-img></div>
+                    <div class="uk-position-cover uk-background-cover uk-opacity-20 uk-hidden dark:uk-visible" data-src="assets/images/gradient-01.png" data-uk-img></div>
+                </div>
+                            <!-- ... existing code ... -->
+                            <div id="uni_newsletter" class="uni-newsletter uk-section uk-section-xlarge@m uk-panel" data-anime="opacity:[0, 1]; translateY:[24, 0]; onview: true; delay: 300;">
+                                <div class="uk-width-expand@m" id="tab_content">
+                                <div class="uk-container">
+                                    <div class="container tab-content" id="normal_trades">                              
+                                        <div class="mb-8 flex flex-wrap items-center justify-between">
+                                            <ul class="flex flex-wrap items-center">
+                                                <h2 class="text-center font-display text-3xl dark:text-white">
+                                                    Open Swaps
+                                                  </h2>
+                                              </ul>
+                                          <div class="dropdown my-1 cursor-pointer menu">
+                                            <div class="inline-flex w-38 items-center justify-between rounded-lg border border-jacarta-100 bg-white py-2 px-3 text-sm dark:border-jacarta-600 dark:bg-jacarta-700 dark:text-white text-white transition-colors hover:border-transparent hover:bg-accent hover:text-white" role="button" id="categoriesSort" data-bs-toggle="dropdown" aria-expanded="false">
+                                                <a style="text-decoration: none !important;" id="create_swaps" data-tab="create_swaps" class="group flex h-9 items-center rounded-lg text-jacarta-500  dark:border-jacarta-600 dark:bg-jacarta-900 dark:text-white text-white dark:hover:border-transparent dark:hover:bg-accent dark:hover:text-white">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" class="mr-1 h-4 w-4 fill-jacarta-700 transition-colors group-hover:fill-white dark:fill-jacarta-100">
+                                                        <path fill="none" d="M0 0h24v24H0z"></path>
+                                                        <path d="M2 4a1 1 0 0 1 1-1h18a1 1 0 0 1 1 1v5.5a2.5 2.5 0 1 0 0 5V20a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V4zm6.085 15a1.5 1.5 0 0 1 2.83 0H20v-2.968a4.5 4.5 0 0 1 0-8.064V5h-9.085a1.5 1.5 0 0 1-2.83 0H4v14h4.085zM9.5 11a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm0 5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"></path>
+                                                    </svg>
+                                                    <span style="color:black;">Create Swaps</span>
+                                                </a>
+                                            </div>
+                                            <div class="transition-colors hover:border-transparent hover:bg-accent hover:text-white inline-flex w-38 items-center justify-between rounded-lg border border-jacarta-100 bg-white py-2 px-3 text-sm dark:border-jacarta-600 dark:bg-jacarta-700 dark:text-white text-white" role="button" id="categoriesSort" data-bs-toggle="dropdown" aria-expanded="false">
+                                                <a style="text-decoration: none !important;" id="normal_trades" data-tab="normal_trades" class="group flex h-9 items-center rounded-lg text-jacarta-500 transition-colors hover:border-transparent hover:bg-accent hover:text-white dark:border-jacarta-600 dark:bg-jacarta-900 dark:text-white text-white dark:hover:border-transparent dark:hover:bg-accent dark:hover:text-white">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" class="mr-1 h-4 w-4 fill-jacarta-700 transition-colors group-hover:fill-white dark:fill-jacarta-100">
+                                                        <path fill="none" d="M0 0h24v24H0z"></path>
+                                                        <path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-2.29-2.333A17.9 17.9 0 0 1 8.027 13H4.062a8.008 8.008 0 0 0 5.648 6.667zM10.03 13c.151 2.439.848 4.73 1.97 6.752A15.905 15.905 0 0 0 13.97 13h-3.94zm9.908 0h-3.965a17.9 17.9 0 0 1-1.683 6.667A8.008 8.008 0 0 0 19.938 13zM4.062 11h3.965A17.9 17.9 0 0 1 9.71 4.333 8.008 8.008 0 0 0 4.062 11zm5.969 0h3.938A15.905 15.905 0 0 0 12 4.248 15.905 15.905 0 0 0 10.03 11zm4.259-6.667A17.9 17.9 0 0 1 15.973 11h3.965a8.008 8.008 0 0 0-5.648-6.667z"></path>
+                                                    </svg>
+                                                    <span style="color:blue;">Open Swaps</span>
+                                                </a>
+                                            </div>
+                                            <div class="transition-colors hover:border-transparent hover:bg-accent hover:text-white inline-flex w-38 items-center justify-between rounded-lg border border-jacarta-100 bg-white py-2 px-3 text-sm dark:border-jacarta-600 dark:bg-jacarta-700 dark:text-white text-white" role="button" id="categoriesSort" data-bs-toggle="dropdown" aria-expanded="false">
+                                                <a style="text-decoration: none !important;" id="recent_swaps" data-tab="recent_swaps" class="group flex h-9 items-center rounded-lg text-jacarta-500 transition-colors hover:border-transparent hover:bg-accent hover:text-white dark:border-jacarta-600 dark:bg-jacarta-900 dark:text-white text-white dark:hover:border-transparent dark:hover:bg-accent dark:hover:text-white">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" class="mr-1 h-4 w-4 fill-jacarta-700 transition-colors group-hover:fill-white dark:fill-jacarta-100">
+                                                        <path fill="none" d="M0 0H24V24H0z"></path>
+                                                        <path d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12h2c0 4.418 3.582 8 8 8s8-3.582 8-8-3.582-8-8-8C9.25 4 6.824 5.387 5.385 7.5H8v2H2v-6h2V6c1.824-2.43 4.729-4 8-4zm1 5v4.585l3.243 3.243-1.415 1.415L11 12.413V7h2z"></path>
+                                                      </svg>
+                                                    <span style="color:black;">Recent Swaps</span>
+                                                </a>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="rounded-2lg border border-jacarta-100 bg-white p-8 dark:border-jacarta-600 dark:bg-jacarta-700">
+                                            <div class="mb-8 sm:flex sm:flex-wrap">
+                                              <!-- Highest bid -->
+                                              <div class="sm:w-1/2 sm:pr-4 lg:pr-8">
+                                                <figure class="relative">
+                                                    <a href="item.html">
+                                                      <img src="https://deothemes.com/envato/xhibiter/html/img/products/item_5.jpg" alt="item 5" width="150" height="150" load="lazy" style="object-fit: cover;border-radius: 0.5rem;">
+                                                    </a>
+                                                    <div class="top-3 right-3 flex items-center space-x-1 rounded-md">
+                                                        <div class="block overflow-hidden text-ellipsis whitespace-nowrap">
+                                                            <span class="text-sm text-jacarta-400 dark:text-jacarta-300">From </span>
+                                                            <h4 class="text-sm text-jacarta-400" style="color:black;">0x695d2ef170ce69e794707eeef9497af2de25df82</h4>
+                                                          </div>
+                                                    </div>
+                                                  </figure>
+                                              </div>
+                            
+                                              <!-- Countdown -->
+                                              <div class="sm:w-1/2 sm:pr-4 lg:pr-8" style="margin-bottom: 15px;" id="fuckindian">
+                                                <figure class="relative">
+                                                    <a href="item.html">
+                                                      <img src="https://deothemes.com/envato/xhibiter/html/img/products/item_7.jpg" alt="item 5" width="150" height="150" load="lazy" style="object-fit: cover;border-radius: 0.5rem;">
+                                                    </a>
+                                                    <div class="top-3 right-3 flex items-center space-x-1 rounded-md">
+                                                        <div class="block overflow-hidden text-ellipsis whitespace-nowrap">
+                                                            <span class="text-sm text-jacarta-400 dark:text-jacarta-300">From </span>
+                                                            <h4 class="text-sm text-jacarta-400" style="color:black;">0x695d2ef170ce69e794707eeef9497af2de25df82</h4>
+                                                          </div>
+                                                    </div>
+                                                  </figure>
+                                              </div>
+                                              <style>
+                                                @media (max-width: 579px) {
+                                                  #fuckindian{
+                                                    margin-top: 50px;
+                                                    margin-bottom: 30px;
+                                                  }
+                                                }
+                                              </style>
+                                            </div>
+                                            <a href="#" id="view_trades_button" data-tab="view_trades" class="inline-block w-full rounded-full bg-accent py-3 px-8 text-center font-semibold text-white shadow-accent-volume transition-all hover:bg-accent-dark">View</a>
+                                          </div>
+                                        </div>
+
+                                        <div class="container tab-content" id="view_trades" style="display:none;">                              
+                                            <div class="mb-8 flex flex-wrap items-center justify-between">
+                                                <ul class="flex flex-wrap items-center">
+                                                    <h2 class="text-center font-display text-3xl dark:text-white">
+                                                        Open Swaps
+                                                      </h2>
+                                                  </ul>
+                                              <div class="dropdown my-1 cursor-pointer menu">
+                                                <div class="inline-flex w-38 items-center justify-between rounded-lg border border-jacarta-100 bg-white py-2 px-3 text-sm dark:border-jacarta-600 dark:bg-jacarta-700 dark:text-white text-white" role="button" id="categoriesSort" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <a style="text-decoration: none !important;" id="create_swaps" data-tab="create_swaps" class="group flex h-9 items-center rounded-lg text-jacarta-500 transition-colors hover:border-transparent hover:bg-accent hover:text-white dark:border-jacarta-600 dark:bg-jacarta-900 dark:text-white text-white dark:hover:border-transparent dark:hover:bg-accent dark:hover:text-white">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" class="mr-1 h-4 w-4 fill-jacarta-700 transition-colors group-hover:fill-white dark:fill-jacarta-100">
+                                                            <path fill="none" d="M0 0h24v24H0z"></path>
+                                                            <path d="M2 4a1 1 0 0 1 1-1h18a1 1 0 0 1 1 1v5.5a2.5 2.5 0 1 0 0 5V20a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V4zm6.085 15a1.5 1.5 0 0 1 2.83 0H20v-2.968a4.5 4.5 0 0 1 0-8.064V5h-9.085a1.5 1.5 0 0 1-2.83 0H4v14h4.085zM9.5 11a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm0 5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"></path>
+                                                        </svg>
+                                                        <span style="color:black;">Create Swaps</span>
+                                                    </a>
+                                                </div>
+                                                <div class="inline-flex w-38 items-center justify-between rounded-lg border border-jacarta-100 bg-white py-2 px-3 text-sm dark:border-jacarta-600 dark:bg-jacarta-700 dark:text-white text-white" role="button" id="categoriesSort" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <a style="text-decoration: none !important;" id="normal_trades" data-tab="normal_trades" class="group flex h-9 items-center rounded-lg text-jacarta-500 transition-colors hover:border-transparent hover:bg-accent hover:text-white dark:border-jacarta-600 dark:bg-jacarta-900 dark:text-white text-white dark:hover:border-transparent dark:hover:bg-accent dark:hover:text-white">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" class="mr-1 h-4 w-4 fill-jacarta-700 transition-colors group-hover:fill-white dark:fill-jacarta-100">
+                                                            <path fill="none" d="M0 0h24v24H0z"></path>
+                                                            <path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-2.29-2.333A17.9 17.9 0 0 1 8.027 13H4.062a8.008 8.008 0 0 0 5.648 6.667zM10.03 13c.151 2.439.848 4.73 1.97 6.752A15.905 15.905 0 0 0 13.97 13h-3.94zm9.908 0h-3.965a17.9 17.9 0 0 1-1.683 6.667A8.008 8.008 0 0 0 19.938 13zM4.062 11h3.965A17.9 17.9 0 0 1 9.71 4.333 8.008 8.008 0 0 0 4.062 11zm5.969 0h3.938A15.905 15.905 0 0 0 12 4.248 15.905 15.905 0 0 0 10.03 11zm4.259-6.667A17.9 17.9 0 0 1 15.973 11h3.965a8.008 8.008 0 0 0-5.648-6.667z"></path>
+                                                        </svg>
+                                                        <span style="color:black;">Open Swaps</span>
+                                                    </a>
+                                                </div>
+                                                <div class="inline-flex w-38 items-center justify-between rounded-lg border border-jacarta-100 bg-white py-2 px-3 text-sm dark:border-jacarta-600 dark:bg-jacarta-700 dark:text-white text-white" role="button" id="categoriesSort" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <a style="text-decoration: none !important;" href="#" class="group flex h-9 items-center rounded-lg text-jacarta-500 transition-colors hover:border-transparent hover:bg-accent hover:text-white dark:border-jacarta-600 dark:bg-jacarta-900 dark:text-white text-white dark:hover:border-transparent dark:hover:bg-accent dark:hover:text-white">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" class="mr-1 h-4 w-4 fill-jacarta-700 transition-colors group-hover:fill-white dark:fill-jacarta-100">
+                                                            <path fill="none" d="M0 0H24V24H0z"></path>
+                                                            <path d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12h2c0 4.418 3.582 8 8 8s8-3.582 8-8-3.582-8-8-8C9.25 4 6.824 5.387 5.385 7.5H8v2H2v-6h2V6c1.824-2.43 4.729-4 8-4zm1 5v4.585l3.243 3.243-1.415 1.415L11 12.413V7h2z"></path>
+                                                          </svg>
+                                                        <span style="color:black;">Recent Swaps</span>
+                                                    </a>
+                                                </div>
+                                              </div>
+                                            </div>
+                                              <div class="mb-8 flex flex-wrap items-center justify-between" style="margin-top:6%;">
+                                                <ul class="flex flex-wrap items-center">
+                                                    <h2 class="text-center font-display text-3xl dark:text-white">
+                                                        From: 0x122c...a4f3
+                                                      </h2>
+                                                  </ul>
+                                              <div class="dropdown my-1 cursor-pointer">
+                                                <div class="inline-flex w-38 items-center justify-between">
+                                                    <div class="text-center">
+                                                        <a id="normal_trades" data-tab="normal_trades" class="inline-block square-full bg-accent py-2 px-4 text-center font-semibold text-white shadow-accent-volume transition-all hover:bg-accent-dark rounded-lg">Back</a>
+                                                    </div>
+                                                    </div>
+                                                    <div class="inline-flex w-38 items-center justify-between">
+                                                        <div class="text-center">
+                                                            <a href="#" class="inline-block square-full bg-accent py-2 px-4 text-center font-semibold text-white shadow-accent-volume transition-all hover:bg-accent-dark rounded-lg">Accept Swap</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <hr/>
+                                            <div class="button button-area mt-4">
+                                              <style>
+                                                @media (max-width: 1025px) { 
+                                                  .offeringitem{
+                                                    margin-left: 0 !important;
+                                                    margin-top: calc(70px + 2rem);
+                                                  }
+                                                  #offering{
+                                                    position: absolute;
+                                                    float: left !important;
+                                                    margin-top: 22rem !important;
+                                                  }
+                                                  .mdrr{
+                                                    width: 175px !important;
+                                                    height: 260px !important;
+                                                  }
+                                                }
+                                              </style>
+                                              <!-- TODO: ici -->
+                                                <h2 class="text-2xl font-semibold text-jacarta-700 dark:text-white">Requesting</h2>
+                                                <h2 class="text-2xl font-semibold text-jacarta-700 dark:text-white text-white" style="float:right;margin-top:-2rem;" id="offering">Offering</h2>
+                                             </div>
+                                             <br/>
+                                             <div class="grid grid-cols-2 gap-[1.875rem] md:grid-cols-2 lg:grid-cols-4" style="width:90%;">
+                                                <article>
+                                                  <div class="mdrr block rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
+                                                    <figure class="relative">
+                                                      <a href="item.html">
+                                                        <img src="https://deothemes.com/envato/xhibiter/html/img/products/item_5.jpg" alt="item 5" class="w-full rounded-[0.625rem]" loading="lazy">
+                                                      </a>
+                                                      <div class="absolute top-3 right-3 flex items-center space-x-1 rounded-md bg-white p-2 dark:bg-jacarta-700">
+                                                        <span class="js-likes relative cursor-pointer before:absolute before:h-4 before:w-4 before:bg-[url('../img/heart-fill.svg')] before:bg-cover before:bg-center before:bg-no-repeat before:opacity-0" data-tippy-content="Favorite">
+                                                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" class="h-4 w-4 fill-jacarta-500 hover:fill-red dark:fill-jacarta-200 dark:hover:fill-red">
+                                                            <path fill="none" d="M0 0H24V24H0z"></path>
+                                                            <path d="M12.001 4.529c2.349-2.109 5.979-2.039 8.242.228 2.262 2.268 2.34 5.88.236 8.236l-8.48 8.492-8.478-8.492c-2.104-2.356-2.025-5.974.236-8.236 2.265-2.264 5.888-2.34 8.244-.228zm6.826 1.641c-1.5-1.502-3.92-1.563-5.49-.153l-1.335 1.198-1.336-1.197c-1.575-1.412-3.99-1.35-5.494.154-1.49 1.49-1.565 3.875-.192 5.451L12 18.654l7.02-7.03c1.374-1.577 1.299-3.959-.193-5.454z"></path>
+                                                          </svg>
+                                                        </span>
+                                                        <span style="color: #000;" class="text-sm">15</span>
+                                                      </div>
+                                                    </figure>
+                                                    <div class="mt-7 flex items-center justify-between">
+                                                      <a href="item.html">
+                                                        <span class="font-display text-base text-jacarta-700 hover:text-accent dark:text-white text-white">NFT Name</span>
+                                                      </a>
+                                                      <div class="dropup rounded-full hover:bg-jacarta-100 dark:hover:bg-jacarta-600">
+                                                        <a href="#" class="dropdown-toggle inline-flex h-8 w-8 items-center justify-center text-sm" role="button" id="itemActions" data-bs-toggle="dropdown" aria-expanded="false">
+                                                          <svg width="16" height="4" viewBox="0 0 16 4" fill="none" xmlns="http://www.w3.org/2000/svg" class="fill-jacarta-500 dark:fill-jacarta-200">
+                                                            <circle cx="2" cy="2" r="2"></circle>
+                                                            <circle cx="8" cy="2" r="2"></circle>
+                                                            <circle cx="14" cy="2" r="2"></circle>
+                                                          </svg>
+                                                        </a>
+                                                        <div class="dropdown-menu dropdown-menu-end z-10 hidden min-w-[200px] whitespace-nowrap rounded-xl bg-white py-4 px-2 text-left shadow-xl dark:bg-jacarta-800" aria-labelledby="itemActions">
+                                                          <button class="block w-full rounded-xl px-5 py-2 text-left font-display text-sm transition-colors hover:bg-jacarta-50 dark:text-white text-white dark:hover:bg-jacarta-600">
+                                                            New bid
+                                                          </button>
+                                                          <hr class="my-2 mx-4 h-px border-0 bg-jacarta-100 dark:bg-jacarta-600">
+                                                          <button class="block w-full rounded-xl px-5 py-2 text-left font-display text-sm transition-colors hover:bg-jacarta-50 dark:text-white text-white dark:hover:bg-jacarta-600">
+                                                            Refresh Metadata
+                                                          </button>
+                                                          <button class="block w-full rounded-xl px-5 py-2 text-left font-display text-sm transition-colors hover:bg-jacarta-50 dark:text-white text-white dark:hover:bg-jacarta-600">
+                                                            Share
+                                                          </button>
+                                                          <button class="block w-full rounded-xl px-5 py-2 text-left font-display text-sm transition-colors hover:bg-jacarta-50 dark:text-white text-white dark:hover:bg-jacarta-600">
+                                                            Report
+                                                          </button>
+                                                        </div>
+                                                      </div>
+                                                    </div>
+                                                    <div class="mt-2 text-sm">
+                                                      <span class="mr-1 text-jacarta-700 dark:text-jacarta-200">NFT name</span>
+                                                      <span class="text-jacarta-500 dark:text-jacarta-300">2/8</span>
+                                                    </div>
+                                                  </div>
+                                                </article>
+                                                <article>
+                                                  <div class="mdrr block rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
+                                                    <figure class="relative">
+                                                      <a href="item.html">
+                                                        <img src="https://deothemes.com/envato/xhibiter/html/img/products/item_5.jpg" alt="item 4" class="w-full rounded-[0.625rem]" loading="lazy">
+                                                      </a>
+                                                      <div class="absolute top-3 right-3 flex items-center space-x-1 rounded-md bg-white p-2 dark:bg-jacarta-700">
+                                                        <span class="js-likes relative cursor-pointer before:absolute before:h-4 before:w-4 before:bg-[url('../img/heart-fill.svg')] before:bg-cover before:bg-center before:bg-no-repeat before:opacity-0" data-tippy-content="Favorite">
+                                                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" class="h-4 w-4 fill-jacarta-500 hover:fill-red dark:fill-jacarta-200 dark:hover:fill-red">
+                                                            <path fill="none" d="M0 0H24V24H0z"></path>
+                                                            <path d="M12.001 4.529c2.349-2.109 5.979-2.039 8.242.228 2.262 2.268 2.34 5.88.236 8.236l-8.48 8.492-8.478-8.492c-2.104-2.356-2.025-5.974.236-8.236 2.265-2.264 5.888-2.34 8.244-.228zm6.826 1.641c-1.5-1.502-3.92-1.563-5.49-.153l-1.335 1.198-1.336-1.197c-1.575-1.412-3.99-1.35-5.494.154-1.49 1.49-1.565 3.875-.192 5.451L12 18.654l7.02-7.03c1.374-1.577 1.299-3.959-.193-5.454z"></path>
+                                                          </svg>
+                                                        </span>
+                                                        <span style="color: #000;" class="text-sm">188</span>
+                                                      </div>
+                                                    </figure>
+                                                    <div class="mt-7 flex items-center justify-between">
+                                                      <a href="item.html">
+                                                        <span class="font-display text-base text-jacarta-700 hover:text-accent dark:text-white text-white">NFT Name</span>
+                                                      </a>
+                                                      <div class="dropup rounded-full hover:bg-jacarta-100 dark:hover:bg-jacarta-600">
+                                                        <a href="#" class="dropdown-toggle inline-flex h-8 w-8 items-center justify-center text-sm" role="button" id="itemActions2" data-bs-toggle="dropdown" aria-expanded="false">
+                                                          <svg width="16" height="4" viewBox="0 0 16 4" fill="none" xmlns="http://www.w3.org/2000/svg" class="fill-jacarta-500 dark:fill-jacarta-200">
+                                                            <circle cx="2" cy="2" r="2"></circle>
+                                                            <circle cx="8" cy="2" r="2"></circle>
+                                                            <circle cx="14" cy="2" r="2"></circle>
+                                                          </svg>
+                                                        </a>
+                                                        <div class="dropdown-menu dropdown-menu-end z-10 hidden min-w-[200px] whitespace-nowrap rounded-xl bg-white py-4 px-2 text-left shadow-xl dark:bg-jacarta-800" aria-labelledby="itemActions2">
+                                                          <button class="block w-full rounded-xl px-5 py-2 text-left font-display text-sm transition-colors hover:bg-jacarta-50 dark:text-white text-white dark:hover:bg-jacarta-600">
+                                                            New bid
+                                                          </button>
+                                                          <hr class="my-2 mx-4 h-px border-0 bg-jacarta-100 dark:bg-jacarta-600">
+                                                          <button class="block w-full rounded-xl px-5 py-2 text-left font-display text-sm transition-colors hover:bg-jacarta-50 dark:text-white text-white dark:hover:bg-jacarta-600">
+                                                            Refresh Metadata
+                                                          </button>
+                                                          <button class="block w-full rounded-xl px-5 py-2 text-left font-display text-sm transition-colors hover:bg-jacarta-50 dark:text-white text-white dark:hover:bg-jacarta-600">
+                                                            Share
+                                                          </button>
+                                                          <button class="block w-full rounded-xl px-5 py-2 text-left font-display text-sm transition-colors hover:bg-jacarta-50 dark:text-white text-white dark:hover:bg-jacarta-600">
+                                                            Report
+                                                          </button>
+                                                        </div>
+                                                      </div>
+                                                    </div>
+                                                    <div class="mt-2 text-sm">
+                                                      <span class="mr-1 text-jacarta-700 dark:text-jacarta-200">NFT name</span>
+                                                      <span class="text-jacarta-500 dark:text-jacarta-300">1/7</span>
+                                                    </div>
+                                                  </div>
+                                                </article>
+                                                <article style="margin-left: 7rem;width:100%;" class="offeringitem">
+                                                  <div class="mdrr block rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
+                                                    <figure class="relative">
+                                                      <a href="item.html">
+                                                        <img src="https://deothemes.com/envato/xhibiter/html/img/products/item_5.jpg" alt="item 7" class="w-full rounded-[0.625rem]" loading="lazy">
+                                                      </a>
+                                                      <div class="absolute top-3 right-3 flex items-center space-x-1 rounded-md bg-white p-2 dark:bg-jacarta-700">
+                                                        <span class="js-likes relative cursor-pointer before:absolute before:h-4 before:w-4 before:bg-[url('../img/heart-fill.svg')] before:bg-cover before:bg-center before:bg-no-repeat before:opacity-0" data-tippy-content="Favorite">
+                                                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" class="h-4 w-4 fill-jacarta-500 hover:fill-red dark:fill-jacarta-200 dark:hover:fill-red">
+                                                            <path fill="none" d="M0 0H24V24H0z"></path>
+                                                            <path d="M12.001 4.529c2.349-2.109 5.979-2.039 8.242.228 2.262 2.268 2.34 5.88.236 8.236l-8.48 8.492-8.478-8.492c-2.104-2.356-2.025-5.974.236-8.236 2.265-2.264 5.888-2.34 8.244-.228zm6.826 1.641c-1.5-1.502-3.92-1.563-5.49-.153l-1.335 1.198-1.336-1.197c-1.575-1.412-3.99-1.35-5.494.154-1.49 1.49-1.565 3.875-.192 5.451L12 18.654l7.02-7.03c1.374-1.577 1.299-3.959-.193-5.454z"></path>
+                                                          </svg>
+                                                        </span>
+                                                      </div>
+                                                    </figure>
+                                                    <div class="mt-7 flex items-center justify-between">
+                                                      <a href="item.html">
+                                                        <span class="font-display text-base text-jacarta-700 hover:text-accent dark:text-white text-white">NFT Name</span>
+                                                      </a>
+                                                      <div class="dropup rounded-full hover:bg-jacarta-100 dark:hover:bg-jacarta-600">
+                                                        <a href="#" class="dropdown-toggle inline-flex h-8 w-8 items-center justify-center text-sm" role="button" id="itemActions3" data-bs-toggle="dropdown" aria-expanded="false">
+                                                          <svg width="16" height="4" viewBox="0 0 16 4" fill="none" xmlns="http://www.w3.org/2000/svg" class="fill-jacarta-500 dark:fill-jacarta-200">
+                                                            <circle cx="2" cy="2" r="2"></circle>
+                                                            <circle cx="8" cy="2" r="2"></circle>
+                                                            <circle cx="14" cy="2" r="2"></circle>
+                                                          </svg>
+                                                        </a>
+                                                        <div class="dropdown-menu dropdown-menu-end z-10 hidden min-w-[200px] whitespace-nowrap rounded-xl bg-white py-4 px-2 text-left shadow-xl dark:bg-jacarta-800" aria-labelledby="itemActions3">
+                                                          <button class="block w-full rounded-xl px-5 py-2 text-left font-display text-sm transition-colors hover:bg-jacarta-50 dark:text-white text-white dark:hover:bg-jacarta-600">
+                                                            New bid
+                                                          </button>
+                                                          <hr class="my-2 mx-4 h-px border-0 bg-jacarta-100 dark:bg-jacarta-600">
+                                                          <button class="block w-full rounded-xl px-5 py-2 text-left font-display text-sm transition-colors hover:bg-jacarta-50 dark:text-white text-white dark:hover:bg-jacarta-600">
+                                                            Refresh Metadata
+                                                          </button>
+                                                          <button class="block w-full rounded-xl px-5 py-2 text-left font-display text-sm transition-colors hover:bg-jacarta-50 dark:text-white text-white dark:hover:bg-jacarta-600">
+                                                            Share
+                                                          </button>
+                                                          <button class="block w-full rounded-xl px-5 py-2 text-left font-display text-sm transition-colors hover:bg-jacarta-50 dark:text-white text-white dark:hover:bg-jacarta-600">
+                                                            Report
+                                                          </button>
+                                                        </div>
+                                                      </div>
+                                                    </div>
+                                                    <div class="mt-2 text-sm">
+                                                      <span class="mr-1 text-jacarta-700 dark:text-jacarta-200">NFT name</span>
+                                                      <span class="text-jacarta-500 dark:text-jacarta-300">1/3</span>
+                                                    </div>
+                                                  </div>
+                                                </article>
+                                                <article style="margin-left: 7rem;width:100%;" class="offeringitem">
+                                                  <div class="mdrr block rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
+                                                    <figure class="relative">
+                                                      <a href="item.html">
+                                                        <img src="https://deothemes.com/envato/xhibiter/html/img/products/item_5.jpg" alt="item 6" class="w-full rounded-[0.625rem]" loading="lazy">
+                                                      </a>
+                                                      <div class="absolute top-3 right-3 flex items-center space-x-1 rounded-md bg-white p-2 dark:bg-jacarta-700">
+                                                        <span class="js-likes relative cursor-pointer before:absolute before:h-4 before:w-4 before:bg-[url('../img/heart-fill.svg')] before:bg-cover before:bg-center before:bg-no-repeat before:opacity-0" data-tippy-content="Favorite">
+                                                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" class="h-4 w-4 fill-jacarta-500 hover:fill-red dark:fill-jacarta-200 dark:hover:fill-red">
+                                                            <path fill="none" d="M0 0H24V24H0z"></path>
+                                                            <path d="M12.001 4.529c2.349-2.109 5.979-2.039 8.242.228 2.262 2.268 2.34 5.88.236 8.236l-8.48 8.492-8.478-8.492c-2.104-2.356-2.025-5.974.236-8.236 2.265-2.264 5.888-2.34 8.244-.228zm6.826 1.641c-1.5-1.502-3.92-1.563-5.49-.153l-1.335 1.198-1.336-1.197c-1.575-1.412-3.99-1.35-5.494.154-1.49 1.49-1.565 3.875-.192 5.451L12 18.654l7.02-7.03c1.374-1.577 1.299-3.959-.193-5.454z"></path>
+                                                          </svg>
+                                                        </span>
+                                                        <span style="color: #000;" class="text-sm">159</span>
+                                                      </div>
+                                                    </figure>
+                                                    <div class="mt-7 flex items-center justify-between">
+                                                      <a href="item.html">
+                                                        <span class="font-display text-base text-jacarta-700 hover:text-accent dark:text-white text-white">NFT Name</span>
+                                                      </a>
+                                                      <div class="dropup rounded-full hover:bg-jacarta-100 dark:hover:bg-jacarta-600">
+                                                        <a href="#" class="dropdown-toggle inline-flex h-8 w-8 items-center justify-center text-sm" role="button" id="itemActions4" data-bs-toggle="dropdown" aria-expanded="false">
+                                                          <svg width="16" height="4" viewBox="0 0 16 4" fill="none" xmlns="http://www.w3.org/2000/svg" class="fill-jacarta-500 dark:fill-jacarta-200">
+                                                            <circle cx="2" cy="2" r="2"></circle>
+                                                            <circle cx="8" cy="2" r="2"></circle>
+                                                            <circle cx="14" cy="2" r="2"></circle>
+                                                          </svg>
+                                                        </a>
+                                                        <div class="dropdown-menu dropdown-menu-end z-10 hidden min-w-[200px] whitespace-nowrap rounded-xl bg-white py-4 px-2 text-left shadow-xl dark:bg-jacarta-800" aria-labelledby="itemActions4">
+                                                          <button class="block w-full rounded-xl px-5 py-2 text-left font-display text-sm transition-colors hover:bg-jacarta-50 dark:text-white text-white dark:hover:bg-jacarta-600">
+                                                            New bid
+                                                          </button>
+                                                          <hr class="my-2 mx-4 h-px border-0 bg-jacarta-100 dark:bg-jacarta-600">
+                                                          <button class="block w-full rounded-xl px-5 py-2 text-left font-display text-sm transition-colors hover:bg-jacarta-50 dark:text-white text-white dark:hover:bg-jacarta-600">
+                                                            Refresh Metadata
+                                                          </button>
+                                                          <button class="block w-full rounded-xl px-5 py-2 text-left font-display text-sm transition-colors hover:bg-jacarta-50 dark:text-white text-white dark:hover:bg-jacarta-600">
+                                                            Share
+                                                          </button>
+                                                          <button class="block w-full rounded-xl px-5 py-2 text-left font-display text-sm transition-colors hover:bg-jacarta-50 dark:text-white text-white dark:hover:bg-jacarta-600">
+                                                            Report
+                                                          </button>
+                                                        </div>
+                                                      </div>
+                                                    </div>
+                                                    <div class="mt-2 text-sm " >
+                                                      <span class="mr-1 text-jacarta-700 dark:text-jacarta-200">NFT name</span>
+                                                      <span class="text-jacarta-500 dark:text-jacarta-300">2/3</span>
+                                                    </div>
+                                                  </div>
+                                                </article>
+                                              </div>
+                                            </div>
+                                            <div class="container tab-content" id="recent_swaps" style="display:none;">                              
+                                              <div class="mb-8 flex flex-wrap items-center justify-between">
+                                                  <ul class="flex flex-wrap items-center">
+                                                      <h2 class="text-center font-display text-3xl dark:text-white">
+                                                          Recent Swaps
+                                                        </h2>
+                                                    </ul>
+                                                <div class="dropdown my-1 cursor-pointer menu">
+                                                  <div class="inline-flex w-38 items-center justify-between rounded-lg border border-jacarta-100 bg-white py-2 px-3 text-sm dark:border-jacarta-600 dark:bg-jacarta-700 dark:text-white text-white transition-colors hover:border-transparent hover:bg-accent hover:text-white" role="button" id="categoriesSort" data-bs-toggle="dropdown" aria-expanded="false">
+                                                      <a style="text-decoration: none !important;" id="create_swaps" data-tab="create_swaps" class="group flex h-9 items-center rounded-lg text-jacarta-500 transition-colors hover:border-transparent hover:bg-accent hover:text-white dark:border-jacarta-600 dark:bg-jacarta-900 dark:text-white text-white dark:hover:border-transparent dark:hover:bg-accent dark:hover:text-white">
+                                                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" class="mr-1 h-4 w-4 fill-jacarta-700 transition-colors group-hover:fill-white dark:fill-jacarta-100">
+                                                              <path fill="none" d="M0 0h24v24H0z"></path>
+                                                              <path d="M2 4a1 1 0 0 1 1-1h18a1 1 0 0 1 1 1v5.5a2.5 2.5 0 1 0 0 5V20a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V4zm6.085 15a1.5 1.5 0 0 1 2.83 0H20v-2.968a4.5 4.5 0 0 1 0-8.064V5h-9.085a1.5 1.5 0 0 1-2.83 0H4v14h4.085zM9.5 11a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm0 5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"></path>
+                                                          </svg>
+                                                          <span style="color:black;">Create Swaps</span>
+                                                      </a>
+                                                  </div>
+                                                  <div class="inline-flex w-38 items-center justify-between rounded-lg border border-jacarta-100 bg-white py-2 px-3 text-sm dark:border-jacarta-600 dark:bg-jacarta-700 dark:text-white text-white transition-colors hover:border-transparent hover:bg-accent hover:text-white" role="button" id="categoriesSort" data-bs-toggle="dropdown" aria-expanded="false">
+                                                      <a style="text-decoration: none !important;" id="normal_trades" data-tab="normal_trades" class="group flex h-9 items-center rounded-lg text-jacarta-500 transition-colors hover:border-transparent hover:bg-accent hover:text-white dark:border-jacarta-600 dark:bg-jacarta-900 dark:text-white text-white dark:hover:border-transparent dark:hover:bg-accent dark:hover:text-white">
+                                                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" class="mr-1 h-4 w-4 fill-jacarta-700 transition-colors group-hover:fill-white dark:fill-jacarta-100">
+                                                              <path fill="none" d="M0 0h24v24H0z"></path>
+                                                              <path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-2.29-2.333A17.9 17.9 0 0 1 8.027 13H4.062a8.008 8.008 0 0 0 5.648 6.667zM10.03 13c.151 2.439.848 4.73 1.97 6.752A15.905 15.905 0 0 0 13.97 13h-3.94zm9.908 0h-3.965a17.9 17.9 0 0 1-1.683 6.667A8.008 8.008 0 0 0 19.938 13zM4.062 11h3.965A17.9 17.9 0 0 1 9.71 4.333 8.008 8.008 0 0 0 4.062 11zm5.969 0h3.938A15.905 15.905 0 0 0 12 4.248 15.905 15.905 0 0 0 10.03 11zm4.259-6.667A17.9 17.9 0 0 1 15.973 11h3.965a8.008 8.008 0 0 0-5.648-6.667z"></path>
+                                                          </svg>
+                                                          <span style="color:black;">Open Swaps</span>
+                                                      </a>
+                                                  </div>
+                                                  <div class="inline-flex w-38 items-center justify-between rounded-lg border border-jacarta-100 bg-white py-2 px-3 text-sm dark:border-jacarta-600 dark:bg-jacarta-700 dark:text-white text-white transition-colors hover:border-transparent hover:bg-accent hover:text-white" role="button" id="categoriesSort" data-bs-toggle="dropdown" aria-expanded="false">
+                                                      <a style="text-decoration: none !important;" id="recent_swaps" data-tab="recent_swaps" class="group flex h-9 items-center rounded-lg text-jacarta-500 transition-colors hover:border-transparent hover:bg-accent hover:text-white dark:border-jacarta-600 dark:bg-jacarta-900 dark:text-white text-white dark:hover:border-transparent dark:hover:bg-accent dark:hover:text-white">
+                                                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" class="mr-1 h-4 w-4 fill-jacarta-700 transition-colors group-hover:fill-white dark:fill-jacarta-100">
+                                                              <path fill="none" d="M0 0H24V24H0z"></path>
+                                                              <path d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12h2c0 4.418 3.582 8 8 8s8-3.582 8-8-3.582-8-8-8C9.25 4 6.824 5.387 5.385 7.5H8v2H2v-6h2V6c1.824-2.43 4.729-4 8-4zm1 5v4.585l3.243 3.243-1.415 1.415L11 12.413V7h2z"></path>
+                                                            </svg>
+                                                          <span style="color:blue;">Recent Swaps</span>
+                                                      </a>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                              </div>
+                                            <div class="container tab-content" id="create_swaps" style="display:none;">         
+                                                <div class="mb-8 flex flex-wrap items-center justify-between" style="margin-bottom: 50px;">
+                                                    <ul class="flex flex-wrap items-center">
+                                                        <h2 class="text-center font-display text-3xl dark:text-white">
+                                                            Create Swaps
+                                                          </h2>
+                                                      </ul>
+                                                  <div class="dropdown my-1 cursor-pointer menu">
+                                                    <div class="inline-flex w-38 items-center justify-between rounded-lg border border-jacarta-100 bg-white py-2 px-3 text-sm dark:border-jacarta-600 dark:bg-jacarta-700 dark:text-white text-white transition-colors hover:border-transparent hover:bg-accent hover:text-white" role="button" id="categoriesSort" data-bs-toggle="dropdown" aria-expanded="false">
+                                                        <a style="text-decoration: none !important;" id="create_swaps" data-tab="create_swaps" class="group flex h-9 items-center rounded-lg text-jacarta-500 transition-colors hover:border-transparent hover:bg-accent hover:text-white dark:border-jacarta-600 dark:bg-jacarta-900 dark:text-white text-white dark:hover:border-transparent dark:hover:bg-accent dark:hover:text-white">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" class="mr-1 h-4 w-4 fill-jacarta-700 transition-colors group-hover:fill-white dark:fill-jacarta-100">
+                                                                <path fill="none" d="M0 0h24v24H0z"></path>
+                                                                <path d="M2 4a1 1 0 0 1 1-1h18a1 1 0 0 1 1 1v5.5a2.5 2.5 0 1 0 0 5V20a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V4zm6.085 15a1.5 1.5 0 0 1 2.83 0H20v-2.968a4.5 4.5 0 0 1 0-8.064V5h-9.085a1.5 1.5 0 0 1-2.83 0H4v14h4.085zM9.5 11a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm0 5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"></path>
+                                                            </svg>
+                                                            <span style="color:blue;">Create Swaps</span>
+                                                        </a>
+                                                    </div>
+                                                    <div class="inline-flex w-38 items-center justify-between rounded-lg border border-jacarta-100 bg-white py-2 px-3 text-sm dark:border-jacarta-600 dark:bg-jacarta-700 dark:text-white text-white transition-colors hover:border-transparent hover:bg-accent hover:text-white" role="button" id="categoriesSort" data-bs-toggle="dropdown" aria-expanded="false">
+                                                        <a style="text-decoration: none !important;" id="normal_trades" data-tab="normal_trades" class="group flex h-9 items-center rounded-lg text-jacarta-500 transition-colors hover:border-transparent hover:bg-accent hover:text-white dark:border-jacarta-600 dark:bg-jacarta-900 dark:text-white text-white dark:hover:border-transparent dark:hover:bg-accent dark:hover:text-white">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" class="mr-1 h-4 w-4 fill-jacarta-700 transition-colors group-hover:fill-white dark:fill-jacarta-100">
+                                                                <path fill="none" d="M0 0h24v24H0z"></path>
+                                                                <path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-2.29-2.333A17.9 17.9 0 0 1 8.027 13H4.062a8.008 8.008 0 0 0 5.648 6.667zM10.03 13c.151 2.439.848 4.73 1.97 6.752A15.905 15.905 0 0 0 13.97 13h-3.94zm9.908 0h-3.965a17.9 17.9 0 0 1-1.683 6.667A8.008 8.008 0 0 0 19.938 13zM4.062 11h3.965A17.9 17.9 0 0 1 9.71 4.333 8.008 8.008 0 0 0 4.062 11zm5.969 0h3.938A15.905 15.905 0 0 0 12 4.248 15.905 15.905 0 0 0 10.03 11zm4.259-6.667A17.9 17.9 0 0 1 15.973 11h3.965a8.008 8.008 0 0 0-5.648-6.667z"></path>
+                                                            </svg>
+                                                            <span style="color:black;">Open Swaps</span>
+                                                        </a>
+                                                    </div>
+                                                    <div class="inline-flex w-38 items-center justify-between rounded-lg border border-jacarta-100 bg-white py-2 px-3 text-sm dark:border-jacarta-600 dark:bg-jacarta-700 dark:text-white text-white transition-colors hover:border-transparent hover:bg-accent hover:text-white" role="button" id="categoriesSort" data-bs-toggle="dropdown" aria-expanded="false">
+                                                        <a style="text-decoration: none !important;" id="recent_swaps" data-tab="recent_swaps" class="group flex h-9 items-center rounded-lg text-jacarta-500 transition-colors hover:border-transparent hover:bg-accent hover:text-white dark:border-jacarta-600 dark:bg-jacarta-900 dark:text-white text-white dark:hover:border-transparent dark:hover:bg-accent dark:hover:text-white">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" class="mr-1 h-4 w-4 fill-jacarta-700 transition-colors group-hover:fill-white dark:fill-jacarta-100">
+                                                                <path fill="none" d="M0 0H24V24H0z"></path>
+                                                                <path d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12h2c0 4.418 3.582 8 8 8s8-3.582 8-8-3.582-8-8-8C9.25 4 6.824 5.387 5.385 7.5H8v2H2v-6h2V6c1.824-2.43 4.729-4 8-4zm1 5v4.585l3.243 3.243-1.415 1.415L11 12.413V7h2z"></path>
+                                                              </svg>
+                                                            <span style="color:black;">Recent Swaps</span>
+                                                        </a>
+                                                    </div>
+                                                  </div>
+                                                </div>         
+                                                <style>
+                                                  /* Dark mode styles */
+                                                  .dark .container {
+                                                    background-color: #1a202c; /* Set dark background color for the container */
+                                                    color: #fff; /* Set text color to white in dark mode */
+                                                  }
+
+                                                  .dark input,
+                                                  .dark textarea {
+                                                    background-color: #2d3748; /* Set dark background color for inputs and textarea */
+                                                    color: #fff; /* Set text color to white in dark mode */
+                                                    border-color: #4a5568; /* Set border color for inputs and textarea */
+                                                  }
+
+                                                  .dark input::placeholder,
+                                                  .dark textarea::placeholder {
+                                                    color: #cbd5e0; /* Set placeholder text color for inputs and textarea */
+                                                  }
+
+                                                  .dark button {
+                                                    background-color: #63b3ed; /* Set background color for buttons in dark mode */
+                                                    color: #fff; /* Set text color to white for buttons in dark mode */
+                                                    box-shadow: 0 4px 6px -1px rgba(99, 179, 237, 0.1), 0 2px 4px -1px rgba(99, 179, 237, 0.06); /* Add box shadow for buttons */
+                                                  }
+
+                                                  .dark button:hover {
+                                                    background-color: #3182ce; /* Set darker background color for buttons on hover in dark mode */
+                                                  }
+
+                                                  .dark button:active {
+                                                    background-color: #2c5282; /* Set active background color for buttons in dark mode */
+                                                  }
+
+                                                </style>
+
+                                                <!-- TODO: create_swaps container -->
+                                                <div class="line" style="height: 3px; width: 95vw; margin-left: 2.5vw; background-color: rgba(99, 179, 237, 0.06); transform: translateX(-20%);"></div>
+
+                                                <div class="container" style="margin-top: 50px; transform: translateX(200px);" id="formc">
+                                                    <form id="form1" action="" style="margin-left: 50%; transform: translateX(-50%); margin-bottom: 68.5px;">
+                                                        <h1 style="font-size: 28px; margin-bottom: 15px;">Offering</h1>
+                                                        <!-- <span>Wallet address</span> -->
+                                                        <input class="ppp" type="text" placeholder="Wallet address" style="border-radius: 8px; width: 100%; color: #000; margin-bottom: 10px;">
+                                                        <p></p>
+                                                        <!-- <span>Amount</span> -->
+                                                        <input class="ppp" type="text" placeholder="Amount" style="border-radius: 8px; width: 100%; color: #000;">
+                                                        <p></p>
+                                                        <input class="nft" type="text" placeholder="NFT Contract" style="border-radius: 8px;margin-top: 10px; color: #000;">
+                                                        <input class="nft" type="text" placeholder="NFT ID" style="border-radius: 8px;margin-top: 10px; color: #000;">
+                                                        <button class="addbtn" style="background-color: #741ff5; border-radius: 50vh; padding: 8px 11px;">ADD</button>
+                                                    </form>
+                                                    <div id="line2"class="line" style="height: 3px; width: 95vw; margin-left: 2.5vw; background-color: rgba(99, 179, 237, 0.06); transform: translateX(calc(-21.25% - 200px));"></div>
+                                                    <form id="form2" action="" style="margin-left: 50%; transform: translateX(-50%); margin-bottom: 75px;">
+                                                        <h1 style="font-size: 28px; margin-bottom: 15px; margin-top: 68.5px;">Requesting</h1>
+                                                        <!-- <span>Counterparty address</span> -->
+                                                        <input class="ppp" type="text" placeholder="Counterparty address" style="border-radius: 8px; width: 100%; color: #000; margin-bottom: 10px;">
+                                                        <p></p>
+                                                        <!-- <span>Wallet address</span> -->
+                                                        <input class="ppp" type="text" placeholder="Wallet address" style="border-radius: 8px; width: 100%; color: #000;">
+                                                        <p></p>
+                                                        <input class="nft" type="text" placeholder="NFT Contract" style="border-radius: 8px;margin-top: 10px; color: #000;">
+                                                        <input class="nft" type="text" placeholder="NFT ID" style="border-radius: 8px;margin-top: 10px; color: #000;">
+                                                        <button class="addbtn" style="background-color: #741ff5; border-radius: 50vh; padding: 8px 11px;">ADD</button>
+                                                    </form>
+                                                    <div id="line3" class="line" style="height: 3px; width: 95vw; margin-left: 2.5vw; background-color: rgba(99, 179, 237, 0.06); transform: translateX(calc(-21.25% - 200px));"></div>
+                                                    
+                                                    <div id="form3" action="" style="margin-left: 50%; transform: translateX(-50%); width: 750px; margin-top: 90px;">
+                                                      <div style="display: flex;">
+                                                        <div id="dp1">
+                                                          <h1 style="font-size: 22px;">You are offering</h1>
+                                                          <span>You are offering 50 Ethereum and 1 NFT's</span>
+                                                        </div>
+                                                        <div id="dp2" style="margin-left: auto; margin-right: -100px;">
+                                                          <h1 style="font-size: 22px;">You are requesting</h1>
+                                                          <span>You will get 0 Ethereum and 1 NFT's</span>
+                                                        </div>
+                                                      </div>
+                                                    </div>
+                                                </div> 
+                                                
+                                                <div style="position: absolute; top: 0; left: 375px; margin-top: 245px; padding-bottom: 110px;" id="infoc">
+                                                    <h1 style="font-size: 26px;">What You Are Offering</h1>
+                                                    <span style="display: inline-block; max-width: 330px; margin-top: 5px;">This section determines what you are offering in the trade</span>
+                                                    <h1 id="info2"style="font-size: 26px; margin-top: 246px; ">What You Are Requesting</h1>
+                                                    <span style="display: inline-block; max-width: 330px; margin-top: 5px;">This section determines what you are requesting in the trade</span>
+                                                    <h1 id="info3" style="font-size: 26px; margin-top: 257.5px;">Review Trade</h1>
+                                                    <span style="display: inline-block; max-width: 275px; margin-top: 5px;">Please carefully review your trade for accuracy</span>
+                                                    <p></p>
+                                                    <button id="create_trade" style=" border: 1px solid #fff; border-radius: 8px; margin-top: 200px; padding: 8px 15px;">CREATE TRADE</button>
+                                                </div>
+                                                 
+                                            </div>
+
+                                            <style>
+                                              /* for mobile device */
+                                              @media (max-width: 1500px) {
+                                                .line {
+                                                  width: 500vw !important;
+                                                  margin-left: 0 !important;
+                                                  padding: 0 !important;
+                                                  transform: translateX(-500px) !important;
+                                                  position: absolute !important;
+                                                  left: 0 !important;
+                                                  overflow: hidden;
+                                                }
+                                                #line2{
+                                                  transform: translate(-500px, 50px) !important;
+                                                }
+                                                #line3{
+                                                  transform: translate(-500px, 300px) !important;
+                                                }
+                                                #infoc{
+                                                  left: 3rem !important;
+                                                  z-index: -1;
+                                                }
+                                                #info2{
+                                                  margin-top: 420px !important;
+                                                }
+                                                #info3{
+                                                  margin-top: 500px !important;
+                                                }
+                                                #formc{
+                                                  margin-left: 3rem !important;
+                                                  transform: translate(0px, 150px) !important;
+                                                }
+                                                #form1{
+                                                  margin-left: -50px !important;
+                                                  transform: translate(0, 50px) !important;
+                                                }
+                                                #form2{
+                                                  margin-left: -50px !important;
+                                                  transform: translate(0, 250px) !important;
+                                                }
+                                                #form3{
+                                                  transform: translate(0, 450px) !important;
+                                                  display: block !important;
+                                                  margin: 0;
+                                                  left: 0;
+                                                  transform: translate(0,0);
+                                                  flex-direction: column;
+                                                }
+                                                .ppp{
+                                                  width: 90% !important;
+                                                }
+                                                #create_trade{
+                                                  margin-top: 1200px !important;
+                                                }
+                                                #dp1{
+                                                  margin-top: 100px;
+                                                  transform: translateX(-50vw) !important;
+                                                }
+                                                #dp2{
+                                                  margin-top: 600px;
+                                                  transform: translateX(calc(-50vw - 560px)) !important;
+                                                }
+                                                .menu{
+                                                  width: 100vw !important;
+                                                  min-width: 100vw !important;
+                                                  margin-left: -1rem;
+                                                  cursor: default;
+                                                }
+                                                .nft{
+                                                  width: 44.5% !important;
+                                                }
+                                                .addbtn{
+                                                  margin-top: 20px;
+                                                  margin-left: 50%;
+                                                  padding: 8px 20px !important;
+                                                  transform: translateX(-78.5%);
+                                                }
+                                              }
+                                            </style>
+
+                                        <!-- Grid -->
+                                        <div class="grid grid-cols-1 gap-[1.875rem] md:grid-cols-2 lg:grid-cols-4">
+                                        </div>
+                                      </div>
+                                </div>
+                            </div>
+                        </div>
+                        <style>
+                            .animate__animated.animate__fadeIn {
+                                animation-duration: 1s;
+                                animation-name: fadeIn;
+                            }
+
+                            @keyframes fadeIn {
+                                from {
+                                    opacity: 0;
+                                }
+
+                                to {
+                                    opacity: 1;
+                                }
+                            }
+
+                            .animate__animated.animate__fadeOut {
+                                animation-duration: 1s;
+                                animation-name: fadeOut;
+                            }
+
+                            @keyframes fadeOut {
+                                from {
+                                    opacity: 1;
+                                }
+
+                                to {
+                                    opacity: 0;
+                                }
+                            }
+                        </style>     
+
+                        <script>
+                            // JavaScript to handle tab switching
+                            document.addEventListener('DOMContentLoaded', function () {
+                                const tabs = document.querySelectorAll('[data-tab]');
+                                const tabContents = document.querySelectorAll('.tab-content');
+                        
+                                tabs.forEach(tab => {
+                                    tab.addEventListener('click', () => {
+                                        const target = tab.getAttribute('data-tab');
+                                        tabContents.forEach(content => {
+                                            content.style.display = content.id === target ? 'block' : 'none';
+                                            // add animation to it bro wtf
+                                            content.classList.add('animate__animated', 'animate__fadeIn');
+                                        });
+                                    });
+                                });
+                            });
+                    
+                        </script>
+
+
+        <!-- include scripts -->
+        <script defer src="assets/js/libs/jquery.min.js"></script>
+        <script defer src="assets/js/libs/swiper-bundle.min.js"></script>
+        <script defer src="assets/js/libs/feather.min.js"></script>
+        <script defer src="assets/js/libs/typed.min.js"></script>
+        <script defer src="assets/js/libs/anime.min.js"></script>
+        <script defer src="assets/js/app.js"></script>
+        <script defer src="assets/js/helpers/data-attr-helper.js"></script>
+        <script defer src="assets/js/helpers/swiper-helper.js"></script>
+        <script defer src="assets/js/helpers/typed-helper.js"></script>
+        <script defer src="assets/js/helpers/anime-helper.js"></script>
+
+        <!-- <script defer src="assets/js/helpers/anime-helper-defined-timelines.js"></script> -->
+
+        <script>
+          const queryString = window.location.search;
+          const urlParams = new URLSearchParams(queryString);
+          const getSchema = urlParams.get("schema");
+
+          if (getSchema === "dark") {
+            document.documentElement.classList.add("uk-dark");
+            localStorage.setItem("darkMode", "1");
+            
+            const containers = document.querySelectorAll(".container");
+            containers.forEach((container) => {
+              container.classList.add("dark");
+            });
+          } else if (getSchema === "light") {
+            document.documentElement.classList.remove("uk-dark");
+            localStorage.setItem("darkMode", "0");
+            
+            const containers = document.querySelectorAll(".container");
+            containers.forEach((container) => {
+              container.classList.remove("dark");
+            });
+          }
+        </script>
+    </body>
+</html>
